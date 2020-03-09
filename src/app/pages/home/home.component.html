@@ -1,0 +1,83 @@
+<br>
+<a>
+    <h3 class="text-center">Postulación a cargo desarrollador</h3>
+</a>
+<a href="#">
+    <button type=" button " class="btn btn-info">Obtener Información</button>
+</a>
+<br>
+<br>
+<div class="container ">
+    <div class="table-responsive ">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th scope="col ">N°</th>
+                    <th scope="col ">Number</th>
+                    <th scope="col ">Repeticiones</th>
+                    <th scope="col ">Primera Posición</th>
+                    <th scope="col ">Última Posición</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let n of datanum; index as i">
+                    <th scope="row ">{{i}}</th>
+                    <td>{{n}}</td>
+                    <td>
+                        <span *ngFor="let j of repetidos; index as x">
+                        <div *ngIf="n == j[x].numero ;else sinRepetir">
+                            {{j[x]}}
+                        </div>
+                        <ng-template #sinRepetir>
+                         1
+                        </ng-template>
+                        </span>
+                    </td>
+                    <!--   <span *ngFor=" let o of arr">
+                      <td>{{o}} Posicion [0] del arrays</td>
+                    </span> -->
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--Ejercicio número dos  -->
+
+<br>
+<a>
+    <h3 class="text-center">Ejercicio Número Dos</h3>
+</a>
+<a href="#">
+    <button type=" button " class="btn btn-info">Obtener Información</button>
+</a>
+<br>
+<br>
+<div class="container ">
+    <div class="table-responsive ">
+        <table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th scope="col ">N°</th>
+                    <th scope="col ">Number</th>
+                    <th scope="col ">Repeticiones</th>
+                    <th scope="col ">Primera Posición</th>
+                    <th scope="col ">Última Posición</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let n of datanumdos; index as i">
+                    <th scope="row ">{{i}}</th>
+                    <td>{{n | json}}</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
